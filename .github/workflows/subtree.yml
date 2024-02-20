@@ -31,4 +31,4 @@ jobs:
           branch: ${{ inputs.BRANCH }}
           prefix: ${{ inputs.PREFIX }}
           action: ${{ inputs.ACTION }}
-          token: ${{ secrets.token }}
+          token: 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
