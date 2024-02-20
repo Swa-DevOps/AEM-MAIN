@@ -1,3 +1,0 @@
-qa test
-edit file test 
-edit file test
