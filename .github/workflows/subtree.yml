@@ -14,6 +14,9 @@ on:
       ACTION:
         description: "Specify Action pull / add"
         required: true
+      commit:
+        description: "Enter Commit message"
+        required: true
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -25,10 +28,11 @@ jobs:
           ref: refs/heads/scripts
       - name: subtree
         run: |
-          chmod +x subtreev2.sh && bash subtreev2.sh $repo $branch $prefix $action $token
+          chmod +x subtreev2.sh && bash subtreev2.sh $repo $branch $prefix $action $token $commit
         env:
           repo: ${{ inputs.REPO }}
           branch: ${{ inputs.BRANCH }}
           prefix: ${{ inputs.PREFIX }}
           action: ${{ inputs.ACTION }}
           token: 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
+          commit: ${{ inputs.commit}}
