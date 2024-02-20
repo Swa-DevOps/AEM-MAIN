@@ -4,6 +4,7 @@ branch=$2
 prefix=$3
 action=$4
 toekn=$5
+commit=$6
 
 git reset --hard HEAD
 git config --global user.email "bute.swarup@gmail.com"
@@ -14,5 +15,5 @@ git pull origin
 
 git checkout $branch
 git remote add $prefix $repo -t $branch
-git subtree $action --prefix=$prefix $repo $branch -m "subtree push changes to main"
+git subtree $action --prefix=$prefix $repo $branch -m "$commit"
 git push origin $branch
